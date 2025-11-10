@@ -1,0 +1,17 @@
+site_name: My site
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  language: pt-BR
+extra_css:
+  - style/cor.css
+# plugins:
+#   - to-pdf
+nav:
+  - Home: index.md
+  - User Guide:
+    - Writing your docs: writing-your-docs.md
+    - Styling your docs: styling-your-docs.md
+  - About:
+    - License: license.md
+    - Release Notes: release-notes.md
