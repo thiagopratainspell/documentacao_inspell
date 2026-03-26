@@ -1,17 +1,42 @@
-site_name: My site
-site_url: https://mydomain.org/mysite
+site_name: iPonto Web - Manual Operacional
+site_url: https://ipontoweb.com.br/manual
 theme:
-  name: material
-  language: pt-BR
+  name: readthedocs
+  language: pt
+  # logo: image/inspell.png
+  # favicon: image/inspell.png
+  font:
+    text: Open Sans
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - markdown_tables_extended
+extra:
+  generator: false
+plugins:
+  - search
+  - glightbox
+  - redirects:
+      redirect_maps:
+        "index.md": "tela_de_boas_vindas.md"
 extra_css:
-  - style/cor.css
-# plugins:
-#   - to-pdf
+  - style/estilos.css
 nav:
-  - Home: index.md
-  - User Guide:
-    - Writing your docs: writing-your-docs.md
-    - Styling your docs: styling-your-docs.md
-  - About:
-    - License: license.md
-    - Release Notes: release-notes.md
+  - Introdução:
+      - Planos: planos.md
+      - Equipamentos Integrados: equipamentos_integrados.md
+  - Usando o iPonto Web:
+      - Acesso ao Sistema:
+          - Primeiro Acesso (Registro): registro.md
+          - Acesso Já Cadastrado (Login): acesso_ja_cadastrado.md
+          - Recuperação de Senha: recuperacao_de_senha.md
+      - Telas Principais:
+          - Colaboradores:
+              - Lista de Consulta: lista_de_colaboradores.md
+              - Tela de Cadastro: tela_de_cadastro_de_colaboradores.md
+          - Coletores:
+              - Lista de Consulta: lista_de_coletores.md
+              - Tela de Cadastro: tela_de_cadastro_de_coletores.md
