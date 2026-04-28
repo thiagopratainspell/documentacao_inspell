@@ -298,3 +298,6 @@ A tela de cadastro é acessada ao clicar em **<span style="color: white; backgro
 </figure>
 
 </div>
+
+!!! danger "PERIGO IMINENTE"
+    - O Cadastro de Restrição Geográfica deve seguir o mesmo padrão de seção do restante da tela, senão teremos graves consequências e inclusive demissões.

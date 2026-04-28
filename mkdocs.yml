@@ -3,25 +3,24 @@ site_url: https://ipontoweb.com.br/manual
 theme:
   name: readthedocs
   language: pt
-  # logo: image/inspell.png
-  # favicon: image/inspell.png
-  font:
-    text: Open Sans
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
   - md_in_html
-  - markdown_tables_extended
-extra:
-  generator: false
 plugins:
   - search
+  - encryptcontent:
+      title_prefix: '🔐 '
+      summary: "Atenção! Este conteúdo é exclusivo para Revendedores Inspell!"
+      placeholder: Digite a Senha
+      decryption_failure_message: 'Senha incorreta. Tente novamente.'
+      encryption_info_message: 'Digite a senha fornecida pela nossa equipe de Suporte para acessar este conteúdo!'
   - glightbox
-  - redirects:
-      redirect_maps:
-        "index.md": "tela_de_boas_vindas.md"
+  # - redirects:
+  #     redirect_maps:
+  #       "index.md": "tela_de_boas_vindas.md"
 extra_css:
   - style/estilos.css
 nav:
@@ -30,9 +29,9 @@ nav:
       - Equipamentos Integrados: equipamentos_integrados.md
   - Usando o iPonto Web:
       - Acesso ao Sistema:
-          - Primeiro Acesso (Registro): registro.md
-          - Acesso Já Cadastrado (Login): acesso_ja_cadastrado.md
-          - Recuperação de Senha: recuperacao_de_senha.md
+          - Primeiro Acesso (Registro): acesso_ao_sistema/registro.md
+          - Acesso Já Cadastrado (Login): acesso_ao_sistema/acesso_ja_cadastrado.md
+          - Recuperação de Senha: acesso_ao_sistema/recuperacao_de_senha.md
       - Telas Principais:
           - Colaboradores:
               - Lista de Consulta: lista_de_colaboradores.md
@@ -40,3 +39,19 @@ nav:
           - Coletores:
               - Lista de Consulta: lista_de_coletores.md
               - Tela de Cadastro: tela_de_cadastro_de_coletores.md
+          - Cadastros Auxiliares:
+              - Cargos:
+                - Lista de Consulta: lista_de_cargos.md
+                - Modal de Cadastro: modal_de_cadastro_de_cargos.md
+              - Departamentos:
+                - Lista de Consulta: lista_de_departamentos.md
+                - Modal de Cadastro: modal_de_cadastro_de_departamentos.md
+              - Setores:
+                - Lista de Consulta: lista_de_setores.md
+                - Modal de Cadastro: modal_de_cadastro_de_setores.md
+              - Centros de Custo:
+                - Lista de Consulta: lista_de_centroscusto
+                - Modal de Cadastro: modal_de_cadastro_de_centroscusto.md
+              - Tipos de Ocorrêcia:
+                - Lista de Consulta: lista_de_tipos_de_ocorrencia.md
+                - Modal de Cadastro: modal_de_cadastro_de_tipo_de_ocorrencia.md
