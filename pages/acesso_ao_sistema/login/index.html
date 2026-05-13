@@ -1,0 +1,276 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://thiagopratainspell.github.io/documentacao_inspell/pages/acesso_ao_sistema/login/">
+      <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>Login - iPonto Web - Manual Operacional</title>
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="../../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../../style/estilos.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Login";
+        var mkdocs_page_input_path = "pages\\acesso_ao_sistema\\login.md";
+        var mkdocs_page_url = "/documentacao_inspell/pages/acesso_ao_sistema/login/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> iPonto Web - Manual Operacional
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introdução</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introducao/tela_de_boas_vindas/">Boas Vindas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introducao/planos/">Planos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introducao/equipamentos_integrados/">Equipamentos Integrados</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Usando o iPonto Web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current">Acesso ao Sistema</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../registro/">Registro</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Login</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#aplicacao">Aplicação</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#requisitos">Requisitos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#execucao">Execução</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../recuperacao_de_senha/">Recuperação de Senha</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal">Cadastros</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal">Colaboradores</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../cadastros/principais/colaboradores/lista_de_colaboradores/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../cadastros/principais/colaboradores/tela_de_cadastro_de_colaboradores/">Página de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal">Coletores</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../cadastros/principais/coletores/lista_de_coletores/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../cadastros/principais/coletores/tela_de_cadastro_de_coletor/">Página de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal">Cadastros Auxiliares</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal">Cargos</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/cargos/lista_de_cargos/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/cargos/modal_de_cadastro_de_cargos/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Departamentos</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/departamentos/lista_de_departamentos/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/departamentos/modal_de_cadastro_de_departamentos/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Setores</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/setores/lista_de_setores/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/setores/modal_de_cadastro_de_setores/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Centros de Custo</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/centros_de_custo/lista_de_centroscusto/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/centros_de_custo/modal_de_cadastro_de_centroscusto/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Tipos de Ocorrêcia</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/tipos_de_ocorrencia/lista_de_tipos_de_ocorrencia/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../cadastros/auxiliares/tipos_de_ocorrencia/modal_de_cadastro_de_tipos_de_ocorrencia/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal">Geral</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../geral/iponto_web_agent/iponto_web_agent/">iPonto Web Agent</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Área Restrita</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../area_restrita/revendedor/revendedor/">Revendedor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../area_restrita/inspell/inspell/">Inspell</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">iPonto Web - Manual Operacional</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Usando o iPonto Web</li>
+          <li class="breadcrumb-item">Acesso ao Sistema</li>
+      <li class="breadcrumb-item active">Login</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="login-na-plataforma"><span class="titulo_azul"> <b>Login na Plataforma</b> </span></h1>
+<hr>
+<h2 id="aplicacao"><strong>Aplicação</strong></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Através desse processo, o usuário acessa a <strong>interface do iPonto Web</strong> utilizando os <strong>dados de acesso</strong> inseridos durante o processo de <strong>registro</strong>, para ter acesso às <strong>principais funcionalidades</strong> oferecidas pela plataforma.</p>
+<hr>
+<h2 id="requisitos"><strong>Requisitos</strong></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Para <em>logar</em> no sistema, o <strong>usuário</strong> deve ter:</p>
+<ul>
+<li>Realizado o processo de <strong>registro</strong>.</li>
+<li>O <strong>e-mail</strong> e a <strong>senha</strong> usados durante o processo de registro.</li>
+</ul>
+<hr>
+<h2 id="execucao"><strong>Execução</strong></h2>
+<ul>
+<li>Acesse a <strong>página de login</strong> do iPonto Web <strong><a href="https://ipontoweb.com.br/login/" target="_blank">Clicando Aqui</a></strong>.
+    <figure markdown="">
+        <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../image/acesso_ao_sistema/login/tela_de_login.png" data-desc-position="bottom"><img alt="Image2" src="../../../image/acesso_ao_sistema/login/tela_de_login.png"></a>
+        <figcaption>Interface de Acesso do Sistema - Tela de Login</figcaption>
+    </figure></li>
+</ul>
+<hr>
+<ul>
+<li>No formulário exibido na tela, insira o <strong>e-mail</strong> e a <strong>senha</strong> utilzados durante o <strong>processo de registro</strong> da conta, e então clique no botão "<strong>Acessar</strong>" para continuar com o processo de login.
+    <figure markdown="">
+        <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../image/acesso_ao_sistema/login/tela_de_login_preenchida.png" data-desc-position="bottom"><img alt="Image2" src="../../../image/acesso_ao_sistema/login/tela_de_login_preenchida.png"></a>
+        <figcaption>Interface de Acesso do Sistema - Tela de Login Com Dados Preenchidos</figcaption>
+    </figure></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informação</p>
+<p>Caso você tenha <strong>esquecido</strong> a sua <strong>senha de acesso</strong>, não se preocupe, você pode <strong>recuperá-la</strong> de forma rápida e fácil. Consulte o Passo a Passo <a href="../recuperacao_de_senha/"><strong><span style="color: rgb(2, 85, 197);">Clicando Aqui!</span></strong></a></p>
+</div>
+<!-- !!! danger "Atenção:"
+    Caso o sistema retorne alguma **mensagem de erro** durante a tentativa de **login**, você pode **proceder** da seguinte forma:
+
+    - **Erro 504 - Problemas com a Conexão:** Indica um **impedimento** na tentativa de se conectar ao servidor da plataforma. Verifique a **conexão de internet** da sua máquina, e se não há alguma **restrição de rede** (**Firewall** e **Proxy**, por exemplo) impedindo o acesso ao iPonto Web. Caso o problema persita, há possibilidade de ser um **erro interno** da plataforma, portanto, recomendamos contatar a nossa **equipe de suporte**.
+    - **Erro 400 - E-mail ou senha inválidos:** Indica que o sistema não conseguiu encontrar uma conta válida com as **credenciais** inseridas no formulário de registro. Verifique se você inseriu **corretamente** os dados de acesso, e se realizou o processo de **registro** antes de tentar ***logar*** no sistema. Caso ainda não tenha **registrado** a sua conta, siga o passo a passo **<a href="https://ipontoweb.com.br/registro/." target="_blank">Clicando Aqui</a>**.
+    - **Erro 400 - Email Must Be A Email:** Indica que o e-mail inserido no formulário **não** é um e-mail **válido**. Certifique-se de inserir um e-mail no formato correto (Ex.: **nome@provedor.com**, **nome@provedor.com.br**, **nome@provedor.org.br**) -->
+
+<hr>
+<ul>
+<li>Após clicar em "<strong>Acessar</strong>", o sistema processará suas informações, e se tudo estiver correto, você será <strong>redirecionado automaticamente</strong> para a tela inicial da plataforma, finalizando assim, o <strong>processo de login</strong>.
+    <figure markdown="">
+        <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../image/geral/dashboard/tela_dashboard.png" data-desc-position="bottom"><img alt="Image2" src="../../../image/geral/dashboard/tela_dashboard.png"></a>
+        <figcaption>Interface Principal do Sistema - Dashboard</figcaption>
+    </figure></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../registro/" class="btn btn-neutral float-left" title="Registro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../recuperacao_de_senha/" class="btn btn-neutral float-right" title="Recuperação de Senha">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../registro/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../recuperacao_de_senha/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../js/traducao.js"></script>
+      <script src="../../../js/edicao_de_menus.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

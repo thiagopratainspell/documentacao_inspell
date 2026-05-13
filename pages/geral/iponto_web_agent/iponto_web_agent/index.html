@@ -1,0 +1,531 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://thiagopratainspell.github.io/documentacao_inspell/pages/geral/iponto_web_agent/iponto_web_agent/">
+      <link rel="shortcut icon" href="../../../../img/favicon.ico">
+    <title>iPonto Web Agent - iPonto Web - Manual Operacional</title>
+    <link rel="stylesheet" href="../../../../css/theme.css">
+    <link rel="stylesheet" href="../../../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../../../style/estilos.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "iPonto Web Agent";
+        var mkdocs_page_input_path = "pages\\geral\\iponto_web_agent\\iponto_web_agent.md";
+        var mkdocs_page_url = "/documentacao_inspell/pages/geral/iponto_web_agent/iponto_web_agent/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+<link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> iPonto Web - Manual Operacional
+        </a><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introdução</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../introducao/tela_de_boas_vindas/">Boas Vindas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../introducao/planos/">Planos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../introducao/equipamentos_integrados/">Equipamentos Integrados</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Usando o iPonto Web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal">Acesso ao Sistema</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../acesso_ao_sistema/registro/">Registro</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../acesso_ao_sistema/login/">Login</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../acesso_ao_sistema/recuperacao_de_senha/">Recuperação de Senha</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal">Cadastros</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal">Colaboradores</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../cadastros/principais/colaboradores/lista_de_colaboradores/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../cadastros/principais/colaboradores/tela_de_cadastro_de_colaboradores/">Página de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal">Coletores</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../cadastros/principais/coletores/lista_de_coletores/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../cadastros/principais/coletores/tela_de_cadastro_de_coletor/">Página de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal">Cadastros Auxiliares</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal">Cargos</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/cargos/lista_de_cargos/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/cargos/modal_de_cadastro_de_cargos/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Departamentos</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/departamentos/lista_de_departamentos/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/departamentos/modal_de_cadastro_de_departamentos/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Setores</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/setores/lista_de_setores/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/setores/modal_de_cadastro_de_setores/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Centros de Custo</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/centros_de_custo/lista_de_centroscusto/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/centros_de_custo/modal_de_cadastro_de_centroscusto/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal">Tipos de Ocorrêcia</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/tipos_de_ocorrencia/lista_de_tipos_de_ocorrencia/">Página de Consulta</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../cadastros/auxiliares/tipos_de_ocorrencia/modal_de_cadastro_de_tipos_de_ocorrencia/">Modal de Cadastro</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current">Geral</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">iPonto Web Agent</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#aplicacao">Aplicação</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#requisitos">Requisitos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuracao">Configuração</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instalacao">Instalação</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operacao-e-monitoramento">Operação e Monitoramento</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Área Restrita</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../area_restrita/revendedor/revendedor/">Revendedor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../area_restrita/inspell/inspell/">Inspell</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">iPonto Web - Manual Operacional</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Usando o iPonto Web</li>
+          <li class="breadcrumb-item">Geral</li>
+      <li class="breadcrumb-item active">iPonto Web Agent</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="iponto-web-agent"><span class="titulo_azul"> <b>iPonto Web Agent</b> </span></h1>
+<hr>
+<h2 id="aplicacao"><strong>Aplicação</strong></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;O iPonto Web Agent é um <strong>serviço auxiliar</strong>, instalado localmente em uma máquina <strong>Windows</strong>, apoiando o <strong>iPonto Web Connect</strong>, ao automatizar a <strong>coleta</strong> de registros de ponto (<strong>ainda não lidos</strong>) em arquivos AFD (<strong>Não Fiscais</strong>), originados em equipamentos <strong>REP-P</strong> ou <strong>REP-C</strong>, em uma pasta já configurada.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Embora utilize layouts baseados nas normas fiscais (<strong>Portarias 1510</strong> e <strong>671</strong>), os arquivos não são <strong>compactados</strong> nem <strong>assinados digitalmente</strong>, visando simplificar a <strong>importação</strong> e o <strong>tratamento</strong> desses dados em <strong>Sistemas ERP's</strong> ou <strong>Folhas de Pagamento</strong> parceiras.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Vale lembrar que os <strong>Arquivos AFD</strong> gerados pelo <strong>iPW Agent</strong>, por serem <strong>Não Fiscais</strong>, são constituídos apenas dos seguintes itens:</p>
+<ul>
+<li><strong>Cabeçalho</strong> (Registro do Tipo <strong>1</strong>)</li>
+<li><strong>Marcações de Ponto</strong> (Registros do Tipo <strong>3</strong> para <strong>REP-C</strong>, e do Tipo <strong>7</strong> para <strong>REP-P</strong>)</li>
+<li><strong>Trailer</strong> (Registro do Tipo <strong>9</strong>).</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Logo, todos os <strong>demais eventos</strong> (2, 4, 5 e 6), tais como os dados de <strong>empresas</strong> e <strong>colaboradores</strong>, não são incluídos no arquivo.</p>
+<hr>
+<h2 id="requisitos"><strong>Requisitos</strong></h2>
+<ul>
+<li><em>Sistema Operacional:</em> Windows 8 <strong>64 Bits</strong> ou Windows Server 2008 R2 <strong>64 Bits</strong> (ou superior).</li>
+<li><em>Conexão à Internet:</em> Acesso <strong>liberado</strong> e <strong>irrestrito</strong> ao endereço <b><a href="https://ipontoweb.com.br" target="_blank">ipontoweb.com.br</a></b> nas portas <strong>80</strong> e <strong>443</strong>.</li>
+</ul>
+<hr>
+<h2 id="configuracao"><strong>Configuração</strong></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Local onde se <strong>define</strong> o <strong>comportamento</strong> da coleta automatizada de registros. É acessado através do menu <strong>Gerais</strong> ➡ opção <strong>iPonto Web Agent</strong> ➡ aba <strong>Configurações</strong>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção:</p>
+<ul>
+<li>Para registrar <strong>qualquer alteração</strong>, lembre-se <strong>sempre</strong> de clicar no botão <span class="spanBotoes" style="background-color: #254BC3">SALVAR</span> para <strong>confirmar</strong> as mudanças.</li>
+<li>As mudanças realizadas nessa tela não são imediatamente efetivadas e podem demorar até <strong>30 minutos</strong> para entrarem em vigor.</li>
+</ul>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;A tela dispõe dos <strong>seguintes parâmetros</strong>:</p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/geral/iponto_web_agent/tela_de_configuracoes_agent.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/geral/iponto_web_agent/tela_de_configuracoes_agent.png"></a></p>
+<figcaption>iPonto Web Agent - Aba de Configurações</figcaption>
+</figure>
+<ul>
+<li>
+<p><em>Agendamentos Diários:</em> Área em que se define os <strong>horários</strong> que o serviço iPW Agent realizará a(s) <strong>coleta(s)</strong> diária(s).</p>
+<ul>
+<li><em>Agendar um Horário:</em> Digite um <strong>valor válido</strong> no campo “<strong>Novo Horário</strong>” (<strong>12:30</strong>, por exemplo), e clique no botão <span class="spanBotoes" style="background-color: #254BC3">+ ADICIONAR</span> para inseri-lo na lista.</li>
+<li><em>Excluir um Horário:</em> Clique no <strong>X</strong> (<strong>ícone cinza</strong>), mostrado ao lado direito do horário que deseja <strong>remover</strong> da lista, e ele será <strong>excluído</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informações</p>
+<ul>
+<li>O sistema permite <strong>agendar</strong>, no máximo, <strong>12 horários</strong> para a realização das <strong>coletas automatizadas</strong>!</li>
+<li>Ao atingir o <strong>limite máximo</strong> de horários agendados (<strong>12</strong>), o botão <span class="spanBotoes" style="background-color: #8a8a8a">+ ADICIONAR</span> é imediatamente <strong>desabilitado</strong>!</li>
+<li>A <strong>primeira coleta</strong> realizada pelo <strong>serviço</strong> sempre considerará <strong>todos</strong> os registros realizados desde a <strong>00:00</strong> do dia corrente!</li>
+<li>As coletas <strong>não</strong> são realizadas diretamente no(s) <strong>equipamento(s)</strong>, e sim nos na lista de <strong>registros apontados</strong> no Banco de Dados.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>Pasta de Coleta:</em> Determina o <strong>caminho</strong> onde os arquivos AFD <strong>Não Fiscais</strong> serão salvos.</p>
+<ul>
+<li><em>Trocar a Pasta:</em> Copie o <strong>caminho desejado</strong> e cole-o no campo  “<strong>Diretório onde os arquivos coletados serão salvos</strong>”. O serviço também suporta salvar as coletas em <strong>caminhos de rede</strong>, convencionais “<strong>192.168.0.1\DP\Ponto</strong>” ou mapeados “<strong>S:\RH\Ponto</strong>”, por exemplo.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Atenção:</p>
+<p>Garanta que o <strong>usuário</strong> da máquina, onde o serviço <strong>iPonto Web Agent</strong> foi instalado, tem <strong>permissão completa</strong> à pasta de coletas definida, seja ela <strong>local</strong> ou um <strong>caminho de rede</strong>.</p>
+</div>
+</li>
+<li>
+<p><strong>Seleção do Formato do Arquivo (Layout):</strong> Escolha qual <strong>estrutura de arquivo</strong> o sistema deverá utilizar para gerar os <strong>arquivos AFD</strong>.</p>
+<ul>
+<li>
+<p><em>Registros Físicos (REP-C):</em> Registros originados <strong>diretamente</strong> nos equipamentos <strong>REP Físicos</strong>, que possuem <strong>memória fiscal</strong> própria e <strong>impressora</strong>.</p>
+<ul>
+<li>
+<p><em>Opções de exportação disponíveis</em>:</p>
+<ul>
+<li><em>Seguir padrão do modelo do equipamento</em> [<strong>Padrão</strong>]: Segue exatamente o <strong>formato original padrão</strong> dos dispositivos. Se ele for do <strong>Tipo 1510</strong>, gerará o AFD no Padrão da <strong>Portaria 1510</strong>. Se for do <strong>Tipo 671</strong>, usará as definições da <strong>Portaria 671</strong>.</li>
+<li><em>Fixar padrão da portaria 1510:</em> independente do <strong>modelo</strong> ou <strong>fabricante</strong>, sempre gerará o arquivo no formato estrutural da <strong>Portaria</strong> <strong>1510</strong>.</li>
+<li><em>Fixar padrão da portaria 671:</em> independente do <strong>modelo</strong> ou <strong>fabricante</strong>, sempre gerará o arquivo no formato estrutural da <strong>Portaria</strong> <strong>671</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informação</p>
+<p>Independente do tipo de <strong>identificador padrão</strong> de cada portaria (<strong>PIS</strong> no caso da <strong>1510</strong>, ou <strong>CPF</strong>, no caso da <strong>671</strong>), a geração dos arquivos sempre usará o <strong>identificador original</strong> gravado na <strong>marcação</strong>.</p>
+</div>
+</li>
+<li>
+<p>Para ilustrar a <strong>estrutura dos arquivos</strong> gerados pelo sistema, geramos <strong>exemplos</strong> de cada portaria:</p>
+<ul>
+<li><em>Portaria 1510:</em> <b><a href="https://drive.google.com/file/d/1Kr4EMxxPQFEz9pOptcmjOMzk9jfQ33CZ/view?usp=drive_link" target="_blank">Clique Aqui Para Baixar</a>.</b></li>
+<li><em>Portaria 671:</em> <b><a href="https://drive.google.com/file/d/14GD5gkCFMzglNFxbeMYT0wKHhi6FJ8vt/view?usp=sharing" target="_blank">Clique Aqui Para Baixar</a>.</b></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informação</p>
+<p>Para o modo <strong>REP-C</strong>, será gerado <strong>1</strong> (<strong>um</strong>) arquivo AFD por <strong>equipamento</strong>, para cada coleta agendada nos <strong>horários programados</strong>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Registros Móveis (REP-P):</em> Registros originados via aplicativos Inspell (<strong>iPonto Mobile</strong>, <strong>Multiponto</strong> ou <strong>Site de Marcação Web</strong>) ou <strong>coletores parceiros</strong> compatíveis com o iGateway.</p>
+<ul>
+<li>
+<p><em>Opções de exportação disponíveis:</em></p>
+<ul>
+<li><em>Fixar padrão da portaria 671</em> [<strong>Padrão</strong>]: independente do <strong>modelo</strong> ou <strong>fabricante</strong>, sempre gerará o arquivo no formato estrutural da <strong>Portaria 671</strong>.</li>
+<li><em>Fixar padrão da portaria 1510</em>: independente do <strong>modelo</strong> ou <strong>fabricante</strong>, sempre gerará o arquivo no formato estrutural da <strong>Portaria 1510</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informação</p>
+<p>Para <strong>REP-P</strong>, Independente do formato selecionado, o  identificador utilizado será sempre o <strong>CPF</strong>.</p>
+</div>
+</li>
+<li>
+<p>Para ilustrar a <strong>estrutura dos arquivos</strong> gerados pelo sistema, geramos <strong>exemplos</strong> de cada portaria:</p>
+</li>
+<li><em>Portaria 671:</em> <b><a href="https://drive.google.com/file/d/10wnWddSETlyT7hfPrITb4sFB6rKo1yeI/view?usp=drive_link" target="_blank">Clique Aqui Para Baixar</a>.</b></li>
+<li>
+<p><em>Portaria 1510:</em> <b><a href="https://drive.google.com/file/d/1AZU28S3x7z6a00rFDXZoWf353aMXRNkU/view?usp=sharing" target="_blank">Clique Aqui Para Baixar</a>.</b></p>
+<div class="admonition note">
+<p class="admonition-title">Informação</p>
+<p>Para o modo <strong>REP-P</strong>, será gerado <strong>1</strong> (<strong>um</strong>) arquivo <strong>AFD</strong> por <strong>Unidade de Negócio</strong> (identificada através do <strong>CPF</strong> ou <strong>CNPJ</strong>).</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="instalacao"><strong>Instalação</strong></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;A versão <strong>mais recente</strong> do instalador pode ser baixada diretamente no link disponibilizado na aba <strong>Configurações</strong> do <strong>iPonto Web Agent</strong>, ou apenas <b><a href="https://inspell.com.br/downloads/iponto/iPontoWebAgent.exe" target="_blank">Clicando Aqui</a>.</b> Após ter o instalador <strong>baixado</strong> na máquina, basta seguir os <strong>passos seguintes</strong>:</p>
+<ul>
+<li><strong>Execute</strong> o instalador, aceite o Contrato de Uso de Softwares e prossiga para a <strong>página seguinte</strong>:</li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/instalador/tela_de_aceite_do_contrato_instalador.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/instalador/tela_de_aceite_do_contrato_instalador.png"></a></p>
+<figcaption>Página de Aceite do Contrato - Instalador iPW Agent</figcaption>
+</figure>
+<ul>
+<li>Escolha o <strong>local de instalação</strong> desejado e avance para a tela <strong>seguinte</strong> (<strong>OBS:</strong> Recomendamos utilizar o <strong>local de instalação padrão</strong> definido pelo instalador):</li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/instalador/tela_de_local_de_instalacao_instalador.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/instalador/tela_de_local_de_instalacao_instalador.png"></a></p>
+<figcaption>Página de Definição do Diretório de Instalação - Instalador iPW Agent</figcaption>
+</figure>
+<ul>
+<li>Informe a <strong>Chave de Acesso</strong> e o <strong>CNPJ</strong> / <strong>CPF</strong> da <strong>Unidade de Negócio Principal</strong>, utilizados para realizar o <strong>vínculo do serviço</strong> com a conta.</li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/instalador/tela_de_configuracoes_de_acesso_instalador.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/instalador/tela_de_configuracoes_de_acesso_instalador.png"></a></p>
+<figcaption>Página de Configuração dos Dados de Acesso - Instalador iPW Agent</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Informação</p>
+<ul>
+<li>A <strong>Chave de Acesso</strong> da conta pode ser encontrada no iPonto Web, no caminho (menu <strong>Gerais</strong> ➡ opção <strong>Configurações</strong> ➡ aba <strong>Configurações Gerais</strong>).</li>
+<li>O <strong>CPF</strong> / <strong>CNPJ</strong> da <strong>Unidade de Negócio Principal</strong> pode ser encontrada no caminho (menu <strong>Cadastros</strong> ➡ opção <strong>Unidade de Negócio</strong> ➡ coluna <strong>N° Identificador</strong>)</li>
+</ul>
+</div>
+<ul>
+<li>Na <strong>próxima</strong> tela, basta clicar no botão "<strong>Instalar</strong>" e aguardar o <strong>término do processo</strong>:</li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/instalador/tela_de_revisao_instalador.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/instalador/tela_de_revisao_instalador.png"></a></p>
+<figcaption>Página de Revisão - Instalador iPW Agent</figcaption>
+</figure>
+<div class="admonition danger">
+<p class="admonition-title">Atenção:</p>
+<p>Após o <strong>término da instalação</strong>, a ativação do serviço na máquina local é <strong>automática</strong>, desde que não haja outro iPonto Agent vinculado à <strong>mesma conta</strong> em <strong>outro PC</strong>.</p>
+</div>
+<hr>
+<h2 id="operacao-e-monitoramento"><strong>Operação e Monitoramento</strong></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Todo o <strong>processo de acompanhamento</strong> do recurso é realizado diretamente na <strong>interface do iPonto Web</strong>, através do caminho (menu <strong>Gerais</strong> ➡ opção <strong>iPonto Web Agent</strong> ➡ aba <strong>Staus</strong> / <strong>Histórico</strong>):</p>
+<ol>
+<li>Aba <strong>STATUS</strong>:</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/geral/iponto_web_agent/tela_de_status_agent.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/geral/iponto_web_agent/tela_de_status_agent.png"></a></p>
+<figcaption>Aba STATUS do iPW Agent</figcaption>
+</figure>
+<ul>
+<li>
+<p><em>Nome do Dispositivo:</em> Identifica o computador onde o iPonto Web Agent está <strong>instalado</strong> e foi <strong>vinculado</strong> pela última vez.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção:</p>
+<p>O serviço do <strong>iPW Agent</strong> só pode ser vinculado à <strong>1</strong> (<strong>uma</strong>) conta por vez. Caso seja necessário <strong>trocar</strong> a máquina, procure o seu <strong>revendedor autorizado</strong>.</p>
+</div>
+</li>
+<li>
+<p><em>Endereço de IP:</em> IP <strong>local</strong> da máquina que estava <strong>vinculada</strong> com o serviço do <strong>iPW Agent</strong> na última sincronização (pode <strong>mudar</strong> caso o <strong>IP</strong> esteja configurado como <strong>Dinâmico</strong> / <strong>DHCP</strong>).</p>
+</li>
+<li>
+<p><em>Status do Serviço:</em> Indica o <strong>estado atual</strong> do serviço do iPW Agent, e a data e hora da <strong>última sincronização automática</strong>. Esse processo verifica o <strong>funcionamento do serviço</strong> e <strong>atualiza suas configurações</strong> (novos <strong>horários de coleta</strong> ou troca de <strong>pasta de armazenamento</strong>, por exemplo):</p>
+<ul>
+<li>
+<p><span class="spanBotoes" style="background-color: #254BC3">Nunca Sincronizado</span> ➡ Indica que o <strong>serviço</strong> do iPonto Web Agent ainda não foi <strong>instalado</strong> ou <strong>vinculado</strong> à conta. <br></p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #56CA00">Online</span> ➡ Indique a última <strong>ação</strong> foi correatmente realizada em menos de <strong>24 horas</strong>.</p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #FFB400">Hibernando</span> ➡ Indica que a última ação foi corretamente realizada entre <strong>24</strong> e <strong>72</strong> horas, mas não precisa de uma intervenção imediata.</p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #FF4C51">Offline</span> ➡ Indica que a última ação foi realizada a mais de <strong>72</strong> horas. Essencial acionar o <strong>TI</strong> ou o <strong>Revendedor</strong> para avaliar o motivo do status.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção:</p>
+<p>Caso o status de <strong>Offline</strong> persista, verifique se os <strong>horários</strong> para a realização da <strong>coleta automatizada</strong> estão corretamente definidos e <strong>salvos</strong> na área de <strong>configurações</strong> do <strong>iPW Agent</strong>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Status da Comunicação:</em> Indica o <strong>estado</strong> e a <strong>data</strong> e <strong>hora</strong> da <strong>última comunicação</strong> realizada pelo <strong>iPW Agent</strong>. Esse processo é responsável por coletar as <strong>marcações de ponto</strong> nos horários agendados, e exportar o arquivo <strong>AFD</strong> para a <strong>pasta de destino</strong> configurada:</p>
+<ul>
+<li>
+<p><span class="spanBotoes" style="background-color: #254BC3">Sem coletas</span> ➡ Indica que, ou o <strong>serviço</strong> do iPW <strong>Agent</strong> ainda não foi <strong>instalado</strong> na máquina ou <strong>vinculado</strong> à conta, ou que nenhuma <strong>coleta</strong> agendada ainda foi realizada. </p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #FFB400">Sem dados</span> ➡ Indica que a <strong>comunicação</strong> / <strong>tentativa de coleta</strong> foi corretamente realizada, mas nenhuma nova marcação (registro ainda <strong>não lido</strong>) foi encontrada para coleta. Nesse caso, nenhum <strong>Arquivo AFD</strong> é gerado.</p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #56CA00">Sucesso</span> ➡ Indica que a <strong>comunicação</strong> / <strong>tentativa de coleta</strong> foi corretamente realizada, e no mínimo, <strong>1</strong> (<strong>uma</strong>) nova marcação foi encontrada, <strong>coletada</strong> e exportada no Arquivo <strong>AFD</strong> para o diretório definido nas <strong>configurações</strong> do <strong>iPW Agent</strong>.</p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #FF4C51">Erro</span> ➡ Indica alguma <strong>intercorrência</strong> durante a <strong>comunicação</strong> / <strong>tentativa de coleta</strong>, e neste caso, nenhuma <strong>nova marcação</strong> é exportada. Recomenda-se acionar <strong>imediatamente</strong> o <strong>TI</strong> da sua empresa ou o <strong>Revendedor Autorizado</strong> para diagnosticar o motivo do erro.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Sistema Operacional:</em> Exibe a <strong>versão</strong> / <strong>edição</strong> do sistema operacional <strong>instalado</strong> da máquina onde o serviço está sendo executado. Assim como o <strong>Endereço IP</strong>, é útil para detectar, em grandes <strong>ambientes corporativos</strong>, qual máquina está rodando o <strong>iPW Agent</strong>.</p>
+</li>
+<li>
+<p><em>Versão:</em> Identifica e mostra a <strong>versão atual</strong> do serviço do iPonto Web Agent que está sendo <strong>executado</strong> na máquina local. Útil como <strong>informação técnica</strong> para <strong>suportes remotos</strong>, e para <strong>identificação</strong> de versões antigas que podem ser <strong>atualizadas</strong>.</p>
+</li>
+</ul>
+<hr>
+<ol>
+<li>Aba <strong>HISTÓRICO</strong>:</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Permite <strong>auditar</strong> todas as <strong>coletas</strong> realizadas, através dos seguintes <strong>componentes</strong> na tela:</p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../image/geral/iponto_web_agent/tela_de_historico_agent.png" data-desc-position="bottom"><img alt="Image2" src="../../../../image/geral/iponto_web_agent/tela_de_historico_agent.png"></a></p>
+<figcaption>Aba HISTÓRICO do iPW Agent</figcaption>
+</figure>
+<ul>
+<li><em>Filtros de Seleção:</em> Permite <strong>filtrar</strong> os registros da tabela de <strong>histórico de coletas</strong> através dos seguintes <strong>métodos</strong>:</li>
+<li>
+<ul>
+<li>
+<p><em>Campo Pesquisar:</em> Busca os registros na <strong>tabela</strong> com <strong>base</strong> no texto inserido no campo. Filtra apenas o conteúdo das colunas: <strong>Mensagem Complementar</strong>, <strong>N° Fabricação REP-C</strong>, <strong>CPF</strong> / <strong>CNPJ</strong> da <strong>UN</strong> e <strong>Último NSR Coletado</strong>.</p>
+</li>
+<li>
+<p><em>Tipo:</em> Filtra a <strong>tabela</strong> com base no <strong>tipo</strong> de registro que foi <strong>coletado</strong> (Registros de <strong>REP-C</strong> ou <strong>REP-P</strong>).</p>
+</li>
+<li>
+<p><em>Data Início e Data Final:</em> Permite listar as coletas realizadas com base em um <strong>período delimitado</strong>. Filtra <strong>especificamente</strong> a coluna Data.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Tabela de Histórico de Coletas:</em> Exibe, através de <strong>8 colunas</strong>, informações importantes sobre todas as <strong>comunicações</strong> / <strong>tentativas de coleta</strong> realizadas pelo serviço do <strong>iPW Agent</strong>, facilitando possíveis <strong>diagnósticos de erros</strong> ou <strong>inconsistências</strong>:</p>
+<ul>
+<li>
+<p><em>Data:</em> Indicação, no formato <strong>DD/MM/AAAA</strong> (ex.: <strong>01/01/2026</strong>), da data exata da <strong>comunicação</strong> / <strong>tentativa de coleta</strong>.</p>
+</li>
+<li>
+<p><em>Hora:</em> Indicação, no formato <strong>HH:MM</strong> (ex.: <strong>15:45</strong>), da hora exata da <strong>comunicação</strong> / <strong>tentativa de coleta</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Status da Comunicação:</em> Indica o <strong>estado</strong> e a <strong>data</strong> e <strong>hora</strong> da <strong>comunicação</strong> / <strong>tentativa de coleta</strong>. Esse processo é responsável por coletar as <strong>marcações de ponto</strong> nos horários agendados, e exportar o arquivo <strong>AFD</strong> para a <strong>pasta de destino</strong> configurada:</p>
+<ul>
+<li>
+<p><span class="spanBotoes" style="background-color: #254BC3">Sem coletas</span> ➡ Indica que, ou o <strong>serviço</strong> do iPW <strong>Agent</strong> ainda não foi <strong>instalado</strong> na máquina ou <strong>vinculado</strong> à conta, ou que nenhuma <strong>coleta</strong> agendada ainda foi realizada. </p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #FFB400">Sem dados</span> ➡ Indica que a <strong>comunicação</strong> / <strong>tentativa de coleta</strong> foi corretamente realizada, mas nenhuma nova marcação (registro ainda <strong>não lido</strong>) foi encontrada para coleta.</p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #56CA00">Sucesso</span> ➡ Indica que a <strong>comunicação</strong> / <strong>tentativa de coleta</strong> foi corretamente realizada, e no mínimo, <strong>1</strong> (<strong>uma</strong>) nova marcação foi encontrada, <strong>coletada</strong> e exportada no Arquivo <strong>AFD</strong> para o diretório definido nas <strong>configurações</strong> do <strong>iPW Agent</strong>.</p>
+</li>
+<li>
+<p><span class="spanBotoes" style="background-color: #FF4C51">Erro</span> ➡ Indica alguma <strong>intercorrência</strong> durante a <strong>comunicação</strong> / <strong>tentativa de coleta</strong>, e neste caso, nenhuma <strong>nova marcação</strong> é exportada. Recomenda-se acionar <strong>imediatamente</strong> o <strong>TI</strong> da sua empresa ou o <strong>Revendedor Autorizado</strong> para diagnosticar o motivo do erro.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Mensagem Complementar:</em> Informação que <strong>complementa</strong> o <strong>status da comunicação</strong>, exibida <strong>apenas</strong> quando ocorre um <strong>erro</strong> na <strong>tentativa de coleta</strong>. Mostra uma descrição resumida da <strong>possível</strong> causa do erro, auxiliando no processo de <strong>diagnóstico</strong> (Ex.: <strong>HTTP 403 - Acesso Negado</strong>).</p>
+</li>
+<li>
+<p><em>N° Fabricação REP-C:</em> Aplicável quando ocorre a <strong>coleta</strong> de marcações originadas de Equipamentos <strong>REP-C Físicos</strong>, tanto <strong>1510</strong>, quanto <strong>671</strong>. Em caso de coleta de registros do tipo <strong>REP-P</strong>, o campo é preenchido com “<strong>---</strong>”.</p>
+</li>
+<li>
+<p><em>CPF / CNPJ da UN:</em> Aplicável à todas as <strong>comunicações</strong> que retornaram o <strong>status</strong> de <strong>Sucesso</strong>, ou seja, que coletaram, no mínimo, <strong>1</strong> (<strong>uma</strong>) marcação. Indica qual o identificador (<strong>CPF</strong> ou <strong>CNPJ</strong>) da <strong>Unidade de Negócio</strong> referente às marcações coletadas, sejam elas de <strong>REP-P</strong> ou <strong>REP-C</strong>.</p>
+</li>
+<li>
+<p><em>Último NSR Coletado:</em> Exibe o <strong>Número Sequencial de Registro</strong> da última marcação coletada no processo de <strong>comunicação</strong>. Válido tanto para marcações <strong>REP-C</strong> quanto <strong>REP-P</strong>.</p>
+</li>
+<li>
+<p><em>QTD Registros:</em> Indica a <strong>quantidade total</strong> de registros coletados <strong>com êxito</strong> durante a <strong>comunicação</strong>.</p>
+</li>
+</ul>
+<hr>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../../cadastros/auxiliares/tipos_de_ocorrencia/modal_de_cadastro_de_tipos_de_ocorrencia/" class="btn btn-neutral float-left" title="Modal de Cadastro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../area_restrita/revendedor/revendedor/" class="btn btn-neutral float-right" title="Revendedor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../../cadastros/auxiliares/tipos_de_ocorrencia/modal_de_cadastro_de_tipos_de_ocorrencia/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../../../area_restrita/revendedor/revendedor/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../js/traducao.js"></script>
+      <script src="../../../../js/edicao_de_menus.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

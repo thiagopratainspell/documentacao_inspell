@@ -1,0 +1,209 @@
+/* Caixa Superior do Menu */
+
+.wy-side-nav-search {
+    background-color: #254bc3ff
+}
+
+.rst-content {
+  text-align: justify;
+}
+
+/* Imagens Maiores */
+
+img[alt=Image1] {
+    border-style: ridge;
+    border-color: #254bc3ff;
+    border-width: 3px;
+    box-shadow:
+        2px 2px 3px rgba(0, 0, 0, 0.12),
+        2px 2px 3px rgba(0, 0, 0, 0.24);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+/* Imagens Menores */
+
+img[alt=Image2] {
+    border-style: ridge;
+    border-color: #254bc3ff;
+    border-width: 3px;
+    box-shadow:
+        2px 2px 3px rgba(0, 0, 0, 0.12),
+        2px 2px 3px rgba(0, 0, 0, 0.24);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+/* Legenda das Imagens Maiores e Menores */
+
+.rst-content figcaption {
+  text-align: center;
+}
+
+/* Imagem e Legenda da Página de Manutenção (EM DESENVOLVIMENTO) */
+
+img[alt=Image4] {
+    margin: 0 auto; 
+    width: 20%;
+    display: block;
+    border-radius: 10px;
+}
+
+.emDesenvolvimento {
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+/* GIF */
+
+img[alt=GIF] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+/* Configurações de Tabela */
+
+.tabela-config th {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: 600;
+    background-color: rgba(2, 87, 197, 0.65);
+    border-bottom: 2px solid var(--md-default-fg-color--lightest);
+}
+
+.tabela-config td {
+    line-height: 1.6;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    vertical-align: top;
+}
+
+.tabela-config .secao td {
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.04);
+    letter-spacing: 0.3px;
+}
+
+.tabela-config tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.tabela-config tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background 0.2s ease;
+}
+
+.tabela-config td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tabela-config {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/*  */
+
+.wy-nav-content {
+    max-width: 100%;
+}
+
+/* Títulos */
+
+.titulo_azul {
+    color: #254bc3ff;
+    font-weight: bolder;
+}
+
+.titulo_texto {
+    color: #254bc3ff;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+/* Título das Seções da Barra Lateral */
+
+.caption-text {
+    color: white;
+}
+
+/* Cards (Ex.: Informação e Atenção) */
+
+.rst-content .danger {
+  background-color: rgb(255, 230, 230);
+}
+
+.rst-content .danger .admonition-title {
+  background-color: rgb(255, 121, 121);
+}
+
+.rst-content .note {
+  background-color: rgb(215, 225, 255);
+}
+
+.rst-content .note .admonition-title {
+  background-color: rgb(111, 145, 255);
+}
+
+.rst-content .danger .admonition-title::before {
+  content: "🚨 ";
+}
+
+.rst-content .note .admonition-title::before {
+  content: "📘 ";
+}
+
+/* Spans Para Botões (Ex.: Adicionar, Salvar) */
+
+.spanBotoes {
+        padding: 6px;
+        border-radius: 15px;
+        color: white;
+        font-size: 13px;
+}
+
+.spanBotaoAfastado {
+        padding: 6px;
+        border-radius: 15px;
+        color: #6681D5;
+        font-size: 13px;
+        border-width: 1px;
+        border-style: ridge;
+        border-color: #6681D5;
+}
+
+.spanBotaoCircular {
+  line-height: 25px;
+  width: 25px;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Marcadores (Tópicos) */
+
+.rst-content li {
+  margin-bottom: 10px;
+}
+
+.wy-menu-vertical a.menu-protegido::before {
+  content: "🔐 ";
+}
