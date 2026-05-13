@@ -1,21 +1,25 @@
 /* Caixa Superior do Menu */
 
 .wy-side-nav-search {
-    background-color: rgb(2, 85, 197)
+    background-color: #254bc3ff
+}
+
+.rst-content {
+  text-align: justify;
 }
 
 /* Imagens Maiores */
 
 img[alt=Image1] {
     border-style: ridge;
-    border-color: rgb(2, 85, 197);
+    border-color: #254bc3ff;
     border-width: 3px;
     box-shadow:
         2px 2px 3px rgba(0, 0, 0, 0.12),
         2px 2px 3px rgba(0, 0, 0, 0.24);
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 60%;
+    width: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -26,32 +30,39 @@ img[alt=Image1] {
 
 img[alt=Image2] {
     border-style: ridge;
-    border-color: rgb(2, 85, 197);
+    border-color: #254bc3ff;
     border-width: 3px;
     box-shadow:
         2px 2px 3px rgba(0, 0, 0, 0.12),
         2px 2px 3px rgba(0, 0, 0, 0.24);
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 40%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
 }
 
-img[alt=Image3] {
-    border-style: ridge;
-    border-color: rgb(2, 85, 197);
-    border-width: 3px;
-    box-shadow:
-        2px 2px 3px rgba(0, 0, 0, 0.12),
-        2px 2px 3px rgba(0, 0, 0, 0.24);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 43%;
+/* Legenda das Imagens Maiores e Menores */
+
+.rst-content figcaption {
+  text-align: center;
+}
+
+/* Imagem e Legenda da Página de Manutenção (EM DESENVOLVIMENTO) */
+
+img[alt=Image4] {
+    margin: 0 auto; 
+    width: 20%;
     display: block;
     border-radius: 10px;
+}
+
+.emDesenvolvimento {
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
 }
 
 /* GIF */
@@ -107,7 +118,7 @@ img[alt=GIF] {
     overflow: hidden;
 }
 
-/* Tela Principal */
+/*  */
 
 .wy-nav-content {
     max-width: 100%;
@@ -116,12 +127,83 @@ img[alt=GIF] {
 /* Títulos */
 
 .titulo_azul {
-    color: rgb(2, 85, 197);
+    color: #254bc3ff;
     font-weight: bolder;
 }
 
 .titulo_texto {
-    color: rgb(2, 85, 197);
+    color: #254bc3ff;
     font-weight: bolder;
     font-size: 25px;
+}
+
+/* Título das Seções da Barra Lateral */
+
+.caption-text {
+    color: white;
+}
+
+/* Cards (Ex.: Informação e Atenção) */
+
+.rst-content .danger {
+  background-color: rgb(255, 230, 230);
+}
+
+.rst-content .danger .admonition-title {
+  background-color: rgb(255, 121, 121);
+}
+
+.rst-content .note {
+  background-color: rgb(215, 225, 255);
+}
+
+.rst-content .note .admonition-title {
+  background-color: rgb(111, 145, 255);
+}
+
+.rst-content .danger .admonition-title::before {
+  content: "🚨 ";
+}
+
+.rst-content .note .admonition-title::before {
+  content: "📘 ";
+}
+
+/* Spans Para Botões (Ex.: Adicionar, Salvar) */
+
+.spanBotoes {
+        padding: 6px;
+        border-radius: 15px;
+        color: white;
+        font-size: 13px;
+}
+
+.spanBotaoAfastado {
+        padding: 6px;
+        border-radius: 15px;
+        color: #6681D5;
+        font-size: 13px;
+        border-width: 1px;
+        border-style: ridge;
+        border-color: #6681D5;
+}
+
+.spanBotaoCircular {
+  line-height: 25px;
+  width: 25px;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Marcadores (Tópicos) */
+
+.rst-content li {
+  margin-bottom: 10px;
+}
+
+.wy-menu-vertical a.menu-protegido::before {
+  content: "🔐 ";
 }

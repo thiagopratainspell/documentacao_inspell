@@ -1,57 +1,88 @@
+# Configurações do Site
+
 site_name: iPonto Web - Manual Operacional
-site_url: https://ipontoweb.com.br/manual
+
+site_url: https://thiagopratainspell.github.io/documentacao_inspell/
+
+# Configurações do Tema
+
 theme:
   name: readthedocs
   language: pt
+
+# Extensões do MarkDown
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
   - md_in_html
+
+# Plugins
+
 plugins:
   - search
+
   - encryptcontent:
-      title_prefix: '🔐 '
-      summary: "Atenção! Este conteúdo é exclusivo para Revendedores Inspell!"
+      title_prefix: ''
+      summary: "Atenção! Este conteúdo é exclusivo!"
       placeholder: Digite a Senha
       decryption_failure_message: 'Senha incorreta. Tente novamente.'
-      encryption_info_message: 'Digite a senha fornecida pela nossa equipe de Suporte para acessar este conteúdo!'
+      encryption_info_message: 'Digite a senha fornecida pela nossa equipe de suporte para acessar este conteúdo!'
+
   - glightbox
-  # - redirects:
-  #     redirect_maps:
-  #       "index.md": "tela_de_boas_vindas.md"
+
+  - redirects:
+      redirect_maps:
+        "index.md": pages/introducao/tela_de_boas_vindas.md
+
+# CSS e JavaScript
+
 extra_css:
-  - style/estilos.css
+  - ./style/estilos.css
+
+extra_javascript:
+  - ./js/traducao.js
+  - ./js/edicao_de_menus.js
+
+# Estrutura de Páginas
+
 nav:
   - Introdução:
-      - Planos: planos.md
-      - Equipamentos Integrados: equipamentos_integrados.md
+      - Boas Vindas: pages/introducao/tela_de_boas_vindas.md
+      - Planos: pages/introducao/planos.md
+      - Equipamentos Integrados: pages/introducao/equipamentos_integrados.md
   - Usando o iPonto Web:
       - Acesso ao Sistema:
-          - Primeiro Acesso (Registro): acesso_ao_sistema/registro.md
-          - Acesso Já Cadastrado (Login): acesso_ao_sistema/acesso_ja_cadastrado.md
-          - Recuperação de Senha: acesso_ao_sistema/recuperacao_de_senha.md
-      - Telas Principais:
+          - Registro: pages/acesso_ao_sistema/registro.md
+          - Login: pages/acesso_ao_sistema/login.md
+          - Recuperação de Senha: pages/acesso_ao_sistema/recuperacao_de_senha.md
+      - Cadastros:
           - Colaboradores:
-              - Lista de Consulta: lista_de_colaboradores.md
-              - Tela de Cadastro: tela_de_cadastro_de_colaboradores.md
+              - Página de Consulta: pages/cadastros/principais/colaboradores/lista_de_colaboradores.md
+              - Página de Cadastro: pages/cadastros/principais/colaboradores/tela_de_cadastro_de_colaboradores.md
           - Coletores:
-              - Lista de Consulta: lista_de_coletores.md
-              - Tela de Cadastro: tela_de_cadastro_de_coletores.md
+              - Página de Consulta: pages/cadastros/principais/coletores/lista_de_coletores.md
+              - Página de Cadastro: pages/cadastros/principais/coletores/tela_de_cadastro_de_coletor.md
           - Cadastros Auxiliares:
               - Cargos:
-                - Lista de Consulta: lista_de_cargos.md
-                - Modal de Cadastro: modal_de_cadastro_de_cargos.md
+                - Página de Consulta: pages/cadastros/auxiliares/cargos/lista_de_cargos.md
+                - Modal de Cadastro: pages/cadastros/auxiliares/cargos/modal_de_cadastro_de_cargos.md
               - Departamentos:
-                - Lista de Consulta: lista_de_departamentos.md
-                - Modal de Cadastro: modal_de_cadastro_de_departamentos.md
+                - Página de Consulta: pages/cadastros/auxiliares/departamentos/lista_de_departamentos.md
+                - Modal de Cadastro: pages/cadastros/auxiliares/departamentos/modal_de_cadastro_de_departamentos.md
               - Setores:
-                - Lista de Consulta: lista_de_setores.md
-                - Modal de Cadastro: modal_de_cadastro_de_setores.md
+                - Página de Consulta: pages/cadastros/auxiliares/setores/lista_de_setores.md
+                - Modal de Cadastro: pages/cadastros/auxiliares/setores/modal_de_cadastro_de_setores.md
               - Centros de Custo:
-                - Lista de Consulta: lista_de_centroscusto
-                - Modal de Cadastro: modal_de_cadastro_de_centroscusto.md
+                - Página de Consulta: pages/cadastros/auxiliares/centros_de_custo/lista_de_centroscusto.md
+                - Modal de Cadastro: pages/cadastros/auxiliares/centros_de_custo/modal_de_cadastro_de_centroscusto.md
               - Tipos de Ocorrêcia:
-                - Lista de Consulta: lista_de_tipos_de_ocorrencia.md
-                - Modal de Cadastro: modal_de_cadastro_de_tipo_de_ocorrencia.md
+                - Página de Consulta: pages/cadastros/auxiliares/tipos_de_ocorrencia/lista_de_tipos_de_ocorrencia.md
+                - Modal de Cadastro: pages/cadastros/auxiliares/tipos_de_ocorrencia/modal_de_cadastro_de_tipos_de_ocorrencia.md
+      - Geral:
+          - iPonto Web Agent: pages/geral/iponto_web_agent/iponto_web_agent.md
+  - Área Restrita:
+      - Revendedor: pages/area_restrita/revendedor/revendedor.md
+      - Inspell: pages/area_restrita/inspell/inspell.md
