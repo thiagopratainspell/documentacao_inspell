@@ -1,43 +1,173 @@
 /* encryptcontent/decrypt-contents.tpl.js */
+// https://stackoverflow.com/a/50868276
+function fromHex(hexString) {
+    return new Uint8Array(hexString.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+}
+// https://stackoverflow.com/a/41106346
+function fromBase64(base64String) {
+    return Uint8Array.from(atob(base64String), c => c.charCodeAt(0));
+}
 
-/* Decrypts the content from the ciphertext bundle. */
-function decrypt_content(password, iv_b64, ciphertext_b64, padding_char) {
-    var key = CryptoJS.MD5(password),
-        iv = CryptoJS.enc.Base64.parse(iv_b64),
-        ciphertext = CryptoJS.enc.Base64.parse(ciphertext_b64),
-        bundle = {
-            key: key,
-            iv: iv,
-            ciphertext: ciphertext
-        };
-    var plaintext = CryptoJS.AES.decrypt(bundle, key, {
-        iv: iv,
-        padding: CryptoJS.pad.Pkcs7
-    });
+async function digestSHA256toBase64(message) {
+  const data = new TextEncoder().encode(message);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = new Uint8Array(hashBuffer);
+  const hashString = String.fromCharCode.apply(null, hashArray);
+  return btoa(hashString);
+};
+
+function base64url_decode(input) {
     try {
-        return plaintext.toString(CryptoJS.enc.Utf8)
-    } catch (err) {
-        // encoding failed; wrong password
+        const binString = atob(input.replace(/-/g, '+').replace(/_/g, '/'));
+        const binArray = Uint8Array.from(binString, (m) => m.codePointAt(0));
+        return new TextDecoder().decode(binArray);
+    }
+    catch (err) {
+        return false;
+    }
+}
+
+/* Decrypts the key from the key bundle. */
+async function decrypt_key(pass, iv_b64, ciphertext_b64, salt_b64) {
+    const salt = fromBase64(salt_b64);
+    const encPassword = new TextEncoder().encode(pass);
+    const kdfkey = await window.crypto.subtle.importKey(
+        "raw",
+        encPassword,
+        "PBKDF2",
+        false,
+        ["deriveKey"],
+    );
+    const wckey = await window.crypto.subtle.deriveKey(
+        {
+          name: "PBKDF2",
+          salt,
+          iterations: encryptcontent_obfuscate ? 1 : 100000,
+          hash: "SHA-256",
+        },
+        kdfkey,
+        { name: "AES-CBC", length: 256 },
+        true,
+        ["decrypt"],
+    );
+    const ciphertext = fromBase64(ciphertext_b64);
+    const iv = fromBase64(iv_b64);
+    try {
+        const decrypted = await window.crypto.subtle.decrypt(
+            {
+                name: "AES-CBC",
+                iv: iv
+            },
+            wckey,
+            ciphertext
+        );
+        const keystore = JSON.parse(new TextDecoder().decode(decrypted));
+        if (encryptcontent_id in keystore) {
+            return keystore;
+        } else {
+            //id not found in keystore
+            return false;
+        }
+    }
+    catch (err) {
+        // encoding failed; wrong key
         return false;
     }
 };
 
-/* Split cyphertext bundle and try to decrypt it */
-function decrypt_content_from_bundle(password, ciphertext_bundle) {
+/* Split key bundle and try to decrypt it */
+async function decrypt_key_from_bundle(password, ciphertext_bundle, username) {
     // grab the ciphertext bundle and try to decrypt it
+    let user, pass;
+    let parts, keys, userhash;
     if (ciphertext_bundle) {
-        let parts = ciphertext_bundle.split(';');
-        if (parts.length == 3) {
-            return decrypt_content(password, parts[0], parts[1], parts[2]);
+        if (username) {
+            user = encodeURIComponent(username.toLowerCase());
+            userhash = await digestSHA256toBase64(user);
+        }
+        for (let i = 0; i < ciphertext_bundle.length; i++) {
+            pass = encodeURIComponent(password);
+            parts = ciphertext_bundle[i].split(';');
+            if (parts.length == 3) {
+                keys = await decrypt_key(pass, parts[0], parts[1], parts[2]);
+                if (keys) {
+                    
+                    return keys;
+                }
+            } else if (parts.length == 4 && username) {
+                if (parts[3] == userhash) {
+                    keys = await decrypt_key(pass, parts[0], parts[1], parts[2]);
+                    if (keys) {
+                        
+                        return keys;
+                    }
+                }
+            }
         }
     }
     return false;
 };
 
+/* Decrypts the content from the ciphertext bundle. */
+async function decrypt_content(key, iv_b64, ciphertext_b64) {
+    const rawKey = fromHex(key);
+    const iv = fromBase64(iv_b64);
+    const ciphertext = fromBase64(ciphertext_b64);
+    try {
+        const wckey = await window.crypto.subtle.importKey(           
+            "raw",
+            rawKey,                                                 
+            "AES-CBC",
+            true,
+            ["decrypt"]
+        );
+        const decrypted = await window.crypto.subtle.decrypt(
+            {
+                name: "AES-CBC",
+                iv: iv
+            },
+            wckey,
+            ciphertext
+        );
+        const decoder = new TextDecoder();
+        return decoder.decode(decrypted);
+    }
+    catch (err) {
+        // encoding failed; wrong key
+        return false;
+    }
+};
 
+/* Split cyphertext bundle and try to decrypt it */
+async function decrypt_content_from_bundle(key, ciphertext_bundle) {
+    // grab the ciphertext bundle and try to decrypt it
+    if (ciphertext_bundle) {
+        let parts = ciphertext_bundle.split(';');
+        if (parts.length == 2) {
+            return await decrypt_content(key, parts[0], parts[1]);
+        }
+    }
+    return false;
+};
+
+/* Save decrypted keystore to sessionStorage */
+async function setKeys(keys_from_keystore) {
+    for (const id in keys_from_keystore) {
+        sessionStorage.setItem(id, keys_from_keystore[id]);
+    }
+};
+
+/* Delete key with specific name in sessionStorage */
+async function delItemName(key) {
+    sessionStorage.removeItem(key);
+};
+
+async function getItemName(key) {
+    return sessionStorage.getItem(key);
+};
 
 /* Reload scripts src after decryption process */
-function reload_js(src) {
+async function reload_js(src) {
     let script_src, script_tag, new_script_tag;
     let head = document.getElementsByTagName('head')[0];
 
@@ -51,6 +181,9 @@ function reload_js(src) {
             }
             if (script_tag.src) {
                 new_script_tag.src = script_tag.src;
+            }
+            if (script_tag.type) {
+                new_script_tag.type = script_tag.type;
             }
             head.appendChild(new_script_tag);
         }
@@ -71,10 +204,8 @@ function reload_js(src) {
     }
 };
 
-
-
 /* Decrypt speficique html entry from mkdocs configuration */
-function decrypt_somethings(password_value, encrypted_something) {
+async function decrypt_somethings(key, encrypted_something) {
     var html_item = '';
     for (const [name, tag] of Object.entries(encrypted_something)) {
         if (tag[1] == 'id') {
@@ -85,92 +216,157 @@ function decrypt_somethings(password_value, encrypted_something) {
             console.log('WARNING: Unknow tag html found, check "encrypted_something" configuration.');
         }
         if (html_item[0]) {
-            for (i = 0; i < html_item.length; i++) {
+            for (let i = 0; i < html_item.length; i++) {
                 // grab the cipher bundle if something exist
-                let content = decrypt_content_from_bundle(password_value, html_item[i].innerHTML);
-                if (content !== false) {
-                    // success; display the decrypted content
-                    html_item[i].innerHTML = content;
-                    html_item[i].style.display = null;
-                    // any post processing on the decrypted content should be done here
+                if (String(html_item[i].style.display).startsWith("none")) {
+                    let content = await decrypt_content_from_bundle(key, html_item[i].innerHTML);
+                    if (content !== false) {
+                        // success; display the decrypted content
+                        html_item[i].innerHTML = content;
+                        html_item[i].style.display = null;
+                        // any post processing on the decrypted content should be done here
+                    }
                 }
             }
         }
     }
+    return html_item[0];
 };
 
 /* Decrypt content of a page */
-function decrypt_action(password_input, encrypted_content, decrypted_content) {
-    // grab the ciphertext bundle
-    // and decrypt it
-    let content = decrypt_content_from_bundle(password_input.value, encrypted_content.innerHTML);
+async function decrypt_action(username_input, password_input, encrypted_content, decrypted_content, key_from_storage=false) {
+    let key=false;
+    let keys_from_keystore=false;
+
+    let user=false;
+    if (username_input) {
+        user = username_input.value;
+    }
+
+    if (key_from_storage !== false) {
+        key = key_from_storage;
+    } else {
+        keys_from_keystore = await decrypt_key_from_bundle(password_input.value, encryptcontent_keystore, user);
+        if (keys_from_keystore) {
+            key = keys_from_keystore[encryptcontent_id];
+        }
+    }
+
+    let content = false;
+    if (key) {
+        content = await decrypt_content_from_bundle(key, encrypted_content.innerHTML);
+    }
     if (content !== false) {
         // success; display the decrypted content
         decrypted_content.innerHTML = content;
-        // encrypted_content.parentNode.removeChild(encrypted_content);
-        // any post processing on the decrypted content should be done here
-        
-        
-        document.getElementById("mkdocs-decrypted-content").querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-        });
-        
-        return true
+        encrypted_content.parentNode.removeChild(encrypted_content);
+
+        if (keys_from_keystore !== false) {
+            return keys_from_keystore
+        } else {
+            return key
+        }
     } else {
         return false
     }
 };
 
-function decryptor_reaction(content_decrypted, password_input, fallback_used, set_global, save_cookie) {
-    let location_path;
-    if (set_global) {
-        location_path = "/documentacao_inspell/"; //global password decrypts at "/{site_path}"
-    } else {
-        location_path = encryptcontent_path;
-    }
-    if (content_decrypted) {
-        
+async function decryptor_reaction(key_or_keys, password_input, decrypted_content, fallback_used=false) {
+    if (key_or_keys) {
+        let key;
+        if (typeof key_or_keys === "object") {
+            key = key_or_keys[encryptcontent_id];
+            setKeys(key_or_keys);
+        } else {
+            key = key_or_keys;
+        }
+
         // continue to decrypt others parts
         
-        
-    } else {
-        // remove item on sessionStorage/localStorage if decryption process fail (Invalid item)
-        if (!fallback_used || set_global) {
-            // create HTML element for the inform message
-            let mkdocs_decrypt_msg = document.getElementById('mkdocs-decrypt-msg');
-            mkdocs_decrypt_msg.textContent = decryption_failure_message;
-            
+        if (typeof inject_something !== 'undefined') {
+            decrypted_content = await decrypt_somethings(key, inject_something);
         }
-        password_input.value = '';
-        password_input.focus();
+        if (typeof delete_something !== 'undefined') {
+            let el = document.getElementById(delete_something)
+            if (el) {
+                el.remove();
+            }
+        }
+        // any post processing on the decrypted content should be done here
+        
+        
+        decrypted_content.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+        
+        if (typeof theme_run_after_decryption !== 'undefined') {
+            theme_run_after_decryption();
+        }
+        if (window.location.hash) { //jump to anchor if hash given after decryption
+            window.location.href = window.location.hash;
+        }
+        //If we got keys then dispatch encryptcontent_event
+        encryptcontent_done = true;
+        window.dispatchEvent(encryptcontent_event);
+    } else {
+        // remove item on sessionStorage if decryption process fail (Invalid item)
+        if (!fallback_used) {
+            if (!encryptcontent_obfuscate) {
+                // create HTML element for the inform message
+                let mkdocs_decrypt_msg = document.getElementById('mkdocs-decrypt-msg');
+                mkdocs_decrypt_msg.textContent = decryption_failure_message;
+                password_input.value = '';
+                password_input.focus();
+            }
+        }
+        delItemName(encryptcontent_id);
     }
 }
 
 /* Trigger decryption process */
-function init_decryptor() {
-    var password_input = document.getElementById('mkdocs-content-password');
+async function init_decryptor() {
+    let username_input = document.getElementById('mkdocs-content-user');
+    let password_input = document.getElementById('mkdocs-content-password');
     // adjust password field width to placeholder length
-    if (password_input.hasAttribute('placeholder')) {
-        password_input.setAttribute('size', password_input.getAttribute('placeholder').length);
+    //if (password_input.hasAttribute('placeholder')) {
+    //    password_input.setAttribute('size', password_input.getAttribute('placeholder').length);
+    //}
+    let encrypted_content = document.getElementById('mkdocs-encrypted-content');
+    let decrypted_content = document.getElementById('mkdocs-decrypted-content');
+    let content_decrypted;
+    /* If remember_keys is set, try to use sessionStorage item to decrypt content when page is loaded */
+    let key_from_storage = await getItemName(encryptcontent_id);
+    if (key_from_storage) {
+        content_decrypted = await decrypt_action(
+            username_input, password_input, encrypted_content, decrypted_content, key_from_storage
+        );
+        
+        decryptor_reaction(content_decrypted, password_input, decrypted_content, true);
     }
-    var encrypted_content = document.getElementById('mkdocs-encrypted-content');
-    var decrypted_content = document.getElementById('mkdocs-decrypted-content');
+        
+    if (!content_decrypted) {
+        //If nothing got decrypted, still dispatch encryptcontent_event
+        encryptcontent_done = true;
+        window.dispatchEvent(encryptcontent_event);
+    }
     
-    
-    /* Default, try decrypt content when key (ctrl) enter is press */
-    password_input.addEventListener('keypress', function(event) {
-        let set_global = false;
+    /* Default, try decrypt content when key enter is press */
+    password_input.addEventListener('keypress', async function(event) {
         if (event.key === "Enter") {
-            if (event.ctrlKey) {
-                set_global = true;
-            }
             event.preventDefault();
-            let content_decrypted = decrypt_action(
-                password_input, encrypted_content, decrypted_content
+            content_decrypted = await decrypt_action(
+                username_input, password_input, encrypted_content, decrypted_content
             );
-            decryptor_reaction(content_decrypted, password_input, false, set_global, true); //no fallback, set_global?, save cookie
+            decryptor_reaction(content_decrypted, password_input, decrypted_content);
         }
     });
+    decrypted_content.style.display = '';
 }
-
-document.addEventListener('DOMContentLoaded', init_decryptor());
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", init_decryptor);
+} else {
+  // `DOMContentLoaded` has already fired
+  init_decryptor();
+}
+window["init_decryptor"] = init_decryptor;
