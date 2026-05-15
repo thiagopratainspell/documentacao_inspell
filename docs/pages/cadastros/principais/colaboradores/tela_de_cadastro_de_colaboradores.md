@@ -51,8 +51,8 @@
     - *Coletor:* Indica o modelo do **coletor**, conforme consta em seu cadastro.
     - *Descrição:* Exibe a descrição do **coletor**, conforme consta em seu cadastro.
     - *Status:* Indica o status atual do vínculo entre o coletor e o colaborador:
-        - ![Ativo](image.png) ➡ Coletor **vinculado** ao colaborador.
-        - ![Inativo](image-1.png) ➡ Coletor **não vinculado** ao colaborador.
+        - ![Ativo](../../../../image/geral/dashboard/toogle_ativo.png) ➡ Coletor **vinculado** ao colaborador.
+        - ![Inativo](../../../../image/geral/dashboard/toogle_inativo.png) ➡ Coletor **não vinculado** ao colaborador.
 
 !!! note "Informações"
     A lista só exibe coletores que estejam **Ativos** no sistema, ou seja, no estado de **Em Operação**. Logo, equipamentos que foram **Inativados** na tela de cadastro de coletores **não serão** exibidos.
