@@ -1,74 +1,32 @@
-# <span class="titulo_azul"> <b>Lista de Tipos de Ocorrência Cadastrados</b> </span>
-
-A tela de Tipos de Ocorrência exibe todas as categorias de ocorrência cadastradas na plataforma, utilizadas para classificaar registros e justificativas de ponto dos colaboradores.
-
-![Image1](../../../../image/cadastros/auxiliares/tipos_de_ocorrencia/lista_de_tipos_de_ocorrencia.png)
+# <span class="titulo_azul"> <b>Página de Tipos de Ocorrência Cadastrados</b> </span>
 
 ---
 
-# <span class="titulo_azul"> <b>Principais Recursos e Componentes da Tela</b> </span>
+## **Aplicação**
 
-## **1 - Filtros de Seleção** 
-### Permite localizar um tipo de ocorrência específico na listagem
-
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>  
-      <td>Pesquisar</td>
-      <td>Campo de busca para localizar um tipo de ocorrência específico, através da descrição.</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Filtra os tipos de ocorrência por situação através das opções Todos, Ativo e Inativo</td>
-        </tr>
-  </tbody>
-</table>
+&nbsp;&nbsp;&nbsp;&nbsp;A <b>Página de Tipos de Ocorrência</b> exibe a listagem de todos os <b>registros cadastrados</b> na plataforma, ativos ou inativos, permitindo <b>gerenciar</b> e realizar <b>ações</b> sobre cada registro.
 
 ---
 
-## **2 - Listagem de Registros (Tabela)** 
-### Exibe todos os Tipos de Ocorrência cadastrados na plataforma com as seguintes informações
+## **Utilização**
 
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>  
-      <td>Descrição</td>
-      <td>Nome do tipo de ocorrência cadastrado. Permite ordenação clicando no cabeçalho da coluna</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Situação atual do registro: Ativo (Azul) ou Inativo (Cinza)</td>
-    </tr>
-    <tr class="secao">
-      <td colspan="2">Ações</td>
-    </tr>
-    <tr>  
-      <td>✏️ Editar</td>
-      <td>Abre o registro do tipo de ocorrência para edição</td>
-    </tr>
-    <tr>  
-      <td>🗑️ Excluir</td>
-      <td>Remove o tipo de ocorrência selecionado do sistema</td>
-    </tr>
-  </tbody>
-</table>
+&nbsp;&nbsp;&nbsp;&nbsp;A tela dispõe das seguintes **opções** para uso:
 
----
 
-!!! danger "Atenção!"
-    O sistema só permite **excluir um tipo de ocorrência** que ainda **<span style="color: red;">NÂO</span>** foi utilizado por algum colaborador.
+![Image2](../../../../image/cadastros/auxiliares/tipos_de_ocorrencia/lista_de_tipos_de_ocorrencia.png)
 
-!!! note "Informação"
-    Os **Tipos de Ocorrência** cadastrados nessa lista podem ser **utilizados pelos seus colaboradores** no nosso APP **<span style="color: rgb(2, 85, 197);">iPonto Mobile</span>**. Caso não o conheça ainda, **<a href="https://www.inspell.com.br/ipontomobile/" target="_blank"><span style="color: rgb(2, 85, 197);text-decoration: underline">Clique Aqui</span></a>** e saiba mais!
+- *Botão* <span class="spanBotoes" style="background-color: #254BC3">+ Novo Tipo de Ocorrência</span> ➡ Abre a tela de cadastro de um **novo tipo de ocorrência**, permitindo **editar** suas informações e **adicioná-lo** ao sistema.
+- *Filtros de Seleção:* Permite **filtrar** os registros da tabela com base nos seguintes **métodos**:
+    - *Pesquisar:* Busca os registros na **tabela** com base no texto inserido no **campo**. Filtra apenas o conteúdo da coluna **Descrição**.
+    - *Status:* Filtra a tabela com base no **status** atual do tipo de ocorrência (**Ativo** e **Inativo**.)
+- *Tabela de Tipos de Ocorrência Cadastrados:* Exibe, através de **3** colunas, informações **importantes** sobre cada **tipo de ocorrência** registrado no sistema, além de um menu de **ações** para **gerenciar** cada cadastro:
+    - *Descrição:* Exibe a **descrição** do tipo de ocorrência, utilizada para **identificação** na lista. É inserida durante o **cadastro** do tipo de ocorrência.
+    - *Status:* Indica o atual **status** do tipo de ocorrência, ou seja, se ele está <span class="spanBotoes" style="background-color: #254BC3">Ativo</span> ou <span class="spanBotoes" style="background-color: #8A8D93">Inativo</span>
+    - *Ações:* Exibe um **grupo de ações** que são utilizadas para gerenciar cada cadastro:
+        - 🖊 ➡ Abre a tela de **edição** do tipo de ocorrência, permitindo alterar sua **descrição** e o seu **status**.
+        - 🗑 ➡ Exclui **permanentemente** o registro do tipo de ocorrência do sistema.
+
+
+!!! note "Informações"
+    - O sistema só permite **excluir tipos de ocorrência** que **<span style="color: red;">NÂO</span>** estejam vinculados com algum colaborador.
+    - Para evitar **inconsistências**, o sistema **<span style="color: red;">NÂO</span>** permite incluir dois ou mais tipos de ocorrência com exatamente o **mesmo nome**.

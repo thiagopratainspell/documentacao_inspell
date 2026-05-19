@@ -1,73 +1,32 @@
-# <span class="titulo_azul"> <b>Lista de Cargos Cadastrados</b> </span>
-
-A Lista de Cargos exibe todos os cargos cadastrados na plataforma, permitindo gerenciar e organizar as funções dos colaboradores.
-
-![Image1](../../../../image/cadastros/auxiliares/cargos/lista_de_cargos.png)
+# <span class="titulo_azul"> <b>Página de Cargos Cadastrados</b> </span>
 
 ---
 
-# <span class="titulo_azul"> <b>Principais Recursos e Componentes da Tela</b> </span>
+## **Aplicação**
 
-## **1 - Filtros de Seleção** 
-### Permite localizar cargos específicos na listagem
-
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>  
-      <td>Pesquisar</td>
-      <td>Campo de busca para localizar um coletor específico, através da descrição.</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Filtra os cargos por situação. As opções disponíveis são Todos, Ativo e Inativo</td>
-        </tr>
-  </tbody>
-</table>
+&nbsp;&nbsp;&nbsp;&nbsp;A <b>Página de Cargos</b> exibe a listagem de todos os <b>registros cadastrados</b> na plataforma, ativos ou inativos, permitindo <b>gerenciar</b> e realizar <b>ações</b> sobre cada registro.
 
 ---
 
-## **2 - Listagem de Cargos** 
-### Exibe todos os cargos cadastrados na plataforma com as seguintes informações
+## **Utilização**
 
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>  
-      <td>Descrição</td>
-      <td>Nome do cargo cadastrado. Permite ordenação clicando no cabeçalho</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Situação atual do cargo — Ativo (Azul) ou Inativo (Cinza)</td>
-    </tr>
-    <tr class="secao">
-      <td colspan="2">Ações</td>
-    </tr>
-    <tr>  
-      <td>✏️ Editar</td>
-      <td>Abre o cadastro do Cargo para edição</td>
-    </tr>
-    <tr>  
-      <td>🗑️ Excluir</td>
-      <td>Remove o Cargo do sistema</td>
-    </tr>
-  </tbody>
-</table>
+&nbsp;&nbsp;&nbsp;&nbsp;A tela dispõe das seguintes **opções** para uso:
 
----
+
+![Image2](../../../../image/cadastros/auxiliares/cargos/lista_de_cargos.png)
+
+- *Botão* <span class="spanBotoes" style="background-color: #254BC3">+ Novo Cargo</span> ➡ Abre a tela de cadastro de um **novo cargo**, permitindo **editar** suas informações e **adicioná-lo** ao sistema.
+- *Filtros de Seleção:* Permite **filtrar** os registros da tabela com base nos seguintes **métodos**:
+    - *Pesquisar:* Busca os registros na **tabela** com base no texto inserido no **campo**. Filtra apenas o conteúdo da coluna **Descrição**.
+    - *Status:* Filtra a tabela com base no **status** atual do cargo (**Ativo** e **Inativo**.)
+- *Tabela de Cargos Cadastrados:* Exibe, através de **3** colunas, informações **importantes** sobre cada **cargo** registrado no sistema, além de um menu de **ações** para **gerenciar** cada cadastro:
+    - *Descrição:* Exibe a **descrição** do cargo, utilizada para **identificação** na lista. É inserida durante o **cadastro** do cargo.
+    - *Status:* Indica o atual **status** do cargo, ou seja, se ele está <span class="spanBotoes" style="background-color: #254BC3">Ativo</span> ou <span class="spanBotoes" style="background-color: #8A8D93">Inativo</span>
+    - *Ações:* Exibe um **grupo de ações** que são utilizadas para gerenciar cada cadastro:
+        - 🖊 ➡ Abre a tela de **edição** do cargo, permitindo alterar sua **descrição** e o seu **status**.
+        - 🗑 ➡ Exclui **permanentemente** o registro do cargo do sistema.
+
 
 !!! note "Informações"
     - O sistema só permite **excluir cargos** que **<span style="color: red;">NÂO</span>** estejam vinculados com algum colaborador.
-    - Para evitar **inconsistências**, o sistema **<span style="color: red;">NÂO</span>** permite incluir dois ou mais cargos com o **mesmo nome**.
-    - Caso você encontre **algum problema** durante o processo, não hesite em **buscar ajuda** com a nossa **equipe de suporte!**
+    - Para evitar **inconsistências**, o sistema **<span style="color: red;">NÂO</span>** permite incluir dois ou mais cargos com exatamente o **mesmo nome**.

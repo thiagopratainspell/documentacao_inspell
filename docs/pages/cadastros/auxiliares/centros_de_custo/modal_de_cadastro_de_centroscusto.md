@@ -1,31 +1,26 @@
 # <span class="titulo_azul"> <b>Modal de Cadastro de Centros de Custo</b> </span>
 
-O **Cadastro de Centros de Custo** é realizado rapidamente através de um **Modal Simples**, exibido ao clicar no botão **<span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">+ Novo Centro de Custo</span>** exibido na tela de listagem de setores.
+---
 
-## **Modal de Cadastro** 
+## **Aplicação**
 
-![Image3](../../../../image/cadastros/auxiliares/centros_de_custo/modal_de_cadastro_de_centrocusto.png)
+&nbsp;&nbsp;&nbsp;&nbsp; O **Cadastro de Centro de Custo** é realizado rapidamente através do seguinte **Modal Simples**, exibido ao clicar no botão **<span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">+ Novo Centro de Custo</span>** exibido na Página de **Listagem**.
 
-### Descrição dos Recursos e Componentes do Modal
+---
 
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
+## **Modal de Cadastro**
 
-  <tbody>
-    <tr>  
-      <td>Descrição</span></td>
-      <td>Nome do centro de custo a ser cadastrado</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Define se o registro está Ativo ou Inativo. Vem habilitado por padrão</td>
-    </tr>
-  </tbody>
-</table>
+<figure markdown>
+  ![Image2](../../../../image/cadastros/auxiliares/centros_de_custo/modal_de_cadastro_de_centrocusto.png)
+  <figcaption>Interface de Cadastro de Centros de Custo - Modal</figcaption>
+</figure>
 
-Após **preencher os campos**, clique em **<span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">Salvar</span>** para confirmar o cadastro, ou em **<span style="color: rgb(2, 85, 197);">Cancelar</span>** para fechar o modal sem salvar as alterações.
+- *Descrição:* Indica a **descrição** do centro de custo, utilizada para **identificação** na lista. É inserida durante o **cadastro** do centro de custo.
+- *Status:* Indica o **status** do centro de custo após o **cadastro**:
+    - ![Ativo](../../../../image/geral/dashboard/toogle_ativo.png) ➡ Centro de Custo **Ativo**.
+    - ![Inativo](../../../../image/geral/dashboard/toogle_inativo.png) ➡ Centro de Custo **Inativo**.
+- *Botão* <span style="color: rgb(2, 85, 197); font-weight: bolder">Cancelar</span> ➡ Interrompe o processo de **cadastro**, descarta qualquer **modificação** e fecha o **modal**.
+- *Botão* <span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">Salvar</span> ➡ Finaliza o **cadastro** do centro de custo, grava as **modificações** realizadas, e fecha o **modal**.
+
+!!! note "Informações"
+    - O iPonto Web é um sistema ***Case Sensitive***, ou seja, que difere letras **maiúsculas** de **minúsculas**. Logo, as expressões "**TESTE**", "**Teste**" e "**teste**" são diferentes na visão da plataforma e podem existir **simultâneamente**.

@@ -1,31 +1,26 @@
-# <span class="titulo_azul"> <b>Tela de Cadastro de Departamentos</b> </span>
+# <span class="titulo_azul"> <b>Modal de Cadastro de Departamentos</b> </span>
 
-O **Cadastro de Departamentos** é realizado rapidamente através de um **Modal Simples**, exibido ao clicar no botão **<span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">+ Novo Departamento</span>** exibido na tela de listagem de cargos.
+---
 
-## **Modal de Cadastro** 
+## **Aplicação**
 
-![Image3](../../../../image/cadastros/auxiliares/departamentos/modal_de_cadastro_de_departamento.png)
+&nbsp;&nbsp;&nbsp;&nbsp; O **Cadastro de Departamento** é realizado rapidamente através do seguinte **Modal Simples**, exibido ao clicar no botão **<span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">+ Novo Departamento</span>** exibido na Página de **Listagem**.
 
-### Descrição dos Recursos e Componentes do Modal
+---
 
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
+## **Modal de Cadastro**
 
-  <tbody>
-    <tr>  
-      <td>Descrição</span></td>
-      <td>Nome do departamento a ser cadastrado</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Define se o departamento está Ativo ou Inativo. Habilitado por padrão</td>
-    </tr>
-  </tbody>
-</table>
+<figure markdown>
+  ![Image2](../../../../image/cadastros/auxiliares/departamentos/modal_de_cadastro_de_departamento.png)
+  <figcaption>Interface de Cadastro de Departamentos - Modal</figcaption>
+</figure>
 
-Após **preencher os campos**, clique em **<span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">Salvar</span>** para confirmar o cadastro, ou em **<span style="color: rgb(2, 85, 197);">Cancelar</span>** para fechar o modal sem salvar as alterações.
+- *Descrição:* Indica a **descrição** do departamento, utilizada para **identificação** na lista. É inserida durante o **cadastro** do departamento.
+- *Status:* Indica o **status** do departamento após o **cadastro**:
+    - ![Ativo](../../../../image/geral/dashboard/toogle_ativo.png) ➡ Departamento **Ativo**.
+    - ![Inativo](../../../../image/geral/dashboard/toogle_inativo.png) ➡ Departamento **Inativo**.
+- *Botão* <span style="color: rgb(2, 85, 197); font-weight: bolder">Cancelar</span> ➡ Interrompe o processo de **cadastro**, descarta qualquer **modificação** e fecha o **modal**.
+- *Botão* <span style="color: white; background-color: rgb(2, 85, 197); border-radius: 5px; padding: 5px">Salvar</span> ➡ Finaliza o **cadastro** do departamento, grava as **modificações** realizadas, e fecha o **modal**.
+
+!!! note "Informações"
+    - O iPonto Web é um sistema ***Case Sensitive***, ou seja, que difere letras **maiúsculas** de **minúsculas**. Logo, as expressões "**TESTE**", "**Teste**" e "**teste**" são diferentes na visão da plataforma e podem existir **simultâneamente**.

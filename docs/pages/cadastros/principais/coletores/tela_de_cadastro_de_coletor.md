@@ -22,7 +22,10 @@
     - ![Ativo](../../../../image/geral/dashboard/toogle_ativo.png) ➡ Coletor **Ativo** / **Em Operação**.
     - ![Inativo](../../../../image/geral/dashboard/toogle_inativo.png) ➡ Coletor **Inativo** / **Fora de Operação**.
 - *Descrição:* Exibe a descrição do **coletor**, conforme consta em seu cadastro.
-- *Número de Série:* Número de **Fabricação** / **Série** do equipamento, utilizado para **identificação** e realização de **vínculo** através do **iGateway**. Comumente vem **anotado** na parte inferior **frontal** do coletor. ![Image1](../../../../image/cadastros/principais/coletores/rep_idclass.png)
+- *Número de Série:* Número de **Fabricação** / **Série** do equipamento, utilizado para **identificação** e realização de **vínculo** através do **iGateway**. Comumente vem **anotado** na parte inferior **frontal** do coletor. 
+
+![Image1](../../../../image/cadastros/principais/coletores/rep_idclass.png)
+
 - *Vínculo Unidade de Negócio:* Define à qual **unidade de negócio** o coletor será vinculado.
 
     - ### Seção Configuração:
@@ -41,4 +44,4 @@
 - *Porta:* Assim como o **Endereço IP**, é utilizada para estabelecimento de **conexão com o equipamento** na rede. No caso dos **REP's iDClass** a porta padrão é **443**.
 - *Usuário:* Define o **nome de usuário** que será utilizado para acessar a **interface web** do equipamento.
 - *Senha Login:* Define a **senha** que será utilizada, juntamente com o nome de usuário, para acessar a **interface web** do equipamento.
-- *CPF do Responsável:* CPF da pessoa responsável pelo equipameto. É utilizado para vincular o iGateway à conta e permitir identificar o equipamento na rede.
+- *CPF do Responsável:* CPF da pessoa **responsável** pelo equipameto. É utilizado para vincular o **iGateway** à conta e permitir **identificar** o equipamento na rede.

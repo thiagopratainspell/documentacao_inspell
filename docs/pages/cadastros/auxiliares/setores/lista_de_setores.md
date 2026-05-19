@@ -1,71 +1,32 @@
-# <span class="titulo_azul"> <b>Lista de Setores Cadastrados</b> </span>
-
-Essa lista exibe todos os setores cadastrados na plataforma, permitindo gerenciar e organizar as unidades de trabalho dos colaboradores.
-
-![Image1](../../../../image/cadastros/auxiliares/setores/lista_de_setores.png)
+# <span class="titulo_azul"> <b>Página de Setores Cadastrados</b> </span>
 
 ---
 
-# <span class="titulo_azul"> <b>Principais Recursos e Componentes da Tela</b> </span>
+## **Aplicação**
 
-## **1 - Filtros de Seleção** 
-### Permite localizar setores específicos na listagem
-
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>  
-      <td>Pesquisar</td>
-      <td>Campo de busca para localizar um setor específico, através da descrição.</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Filtra os setores por situação. As opções disponíveis são Todos, Ativo e Inativo</td>
-        </tr>
-  </tbody>
-</table>
+&nbsp;&nbsp;&nbsp;&nbsp;A <b>Página de Setores</b> exibe a listagem de todos os <b>registros cadastrados</b> na plataforma, ativos ou inativos, permitindo <b>gerenciar</b> e realizar <b>ações</b> sobre cada registro.
 
 ---
 
-## **2 - Listagem de Setores** 
-### Exibe todos os setores cadastrados na plataforma com as seguintes informações
+## **Utilização**
 
-<table class="tabela-config">
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>  
-      <td>Descrição</td>
-      <td>Nome do setor cadastrado. Permite ordenação clicando no cabeçalho da coluna</td>
-    </tr>
-    <tr>  
-      <td>Status</td>
-      <td>Situação atual do registro: Ativo (Azul) ou Inativo (Cinza)</td>
-    </tr>
-    <tr class="secao">
-      <td colspan="2">Ações</td>
-    </tr>
-    <tr>  
-      <td>✏️ Editar</td>
-      <td>Abre o cadastro do setor para edição</td>
-    </tr>
-    <tr>  
-      <td>🗑️ Excluir</td>
-      <td>Remove o registro do setor do sistema</td>
-    </tr>
-  </tbody>
-</table>
+&nbsp;&nbsp;&nbsp;&nbsp;A tela dispõe das seguintes **opções** para uso:
 
----
 
-!!! note "Informação"
-    O sistema só permite **excluir setores** que **<span style="color: red;">NÂO</span>** estejam vinculados com algum colaborador.
+![Image2](../../../../image/cadastros/auxiliares/setores/lista_de_setores.png)
+
+- *Botão* <span class="spanBotoes" style="background-color: #254BC3">+ Novo Setor</span> ➡ Abre a tela de cadastro de um **novo setor**, permitindo **editar** suas informações e **adicioná-lo** ao sistema.
+- *Filtros de Seleção:* Permite **filtrar** os registros da tabela com base nos seguintes **métodos**:
+    - *Pesquisar:* Busca os registros na **tabela** com base no texto inserido no **campo**. Filtra apenas o conteúdo da coluna **Descrição**.
+    - *Status:* Filtra a tabela com base no **status** atual do setor (**Ativo** e **Inativo**.)
+- *Tabela de Setores Cadastrados:* Exibe, através de **3** colunas, informações **importantes** sobre cada **setor** registrado no sistema, além de um menu de **ações** para **gerenciar** cada cadastro:
+    - *Descrição:* Exibe a **descrição** do setor, utilizada para **identificação** na lista. É inserida durante o **cadastro** do setor.
+    - *Status:* Indica o atual **status** do setor, ou seja, se ele está <span class="spanBotoes" style="background-color: #254BC3">Ativo</span> ou <span class="spanBotoes" style="background-color: #8A8D93">Inativo</span>
+    - *Ações:* Exibe um **grupo de ações** que são utilizadas para gerenciar cada cadastro:
+        - 🖊 ➡ Abre a tela de **edição** do setor, permitindo alterar sua **descrição** e o seu **status**.
+        - 🗑 ➡ Exclui **permanentemente** o registro do setor do sistema.
+
+
+!!! note "Informações"
+    - O sistema só permite **excluir setores** que **<span style="color: red;">NÂO</span>** estejam vinculados com algum colaborador.
+    - Para evitar **inconsistências**, o sistema **<span style="color: red;">NÂO</span>** permite incluir dois ou mais setores com exatamente o **mesmo nome**.
