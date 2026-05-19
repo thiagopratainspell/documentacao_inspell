@@ -19,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const emRevisao = [
     "Coletores",
-    "Cadastros Auxiliares",
     "Revendedor",
     "Inspell",
-    
   ];
 
   document.querySelectorAll(".wy-menu-vertical a").forEach(function (link) {
